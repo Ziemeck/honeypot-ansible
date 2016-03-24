@@ -10,6 +10,7 @@ Ubuntu Server 14.04 LTS
 ### Use:
 
 Edit the `hosts` file.
+
 Edit the `defaults/main.yml` file.
 
 **Note:** blablabla
