@@ -32,10 +32,6 @@
     append: yes
   with_items: "{{ samba_users }}"
 
-#- name: Create Samba Password for User(s)
-#  shell: "(echo {{ item.smbpasswd }}; echo {{ item.smbpasswd }}) | smbpasswd -s -a {{ item.name }}"
-#  with_items: "{{ samba_users }}"
-
 - name: "Check that {{ public_share_path }} exist"
   stat:
     path: "{{ public_share_path }}"
@@ -66,3 +62,21 @@
   when: private_dir_exists.stat.exists == False
 
 ## Dodanie plików do udziałów samby
+
+- name: Copy files to samba dirs... (1)
+  template: src=priv1.j2 dest=/samba/private/F8246BOHHG.xlsx
+
+- name: Copy files to samba dirs... (2)
+  template: src=priv2.j2 dest=/samba/private/H000BHY.xlsx
+
+- name: Copy files to samba dirs... (3)
+  template: src=priv3.j2 dest=/samba/private/Email_Lister.xlsx
+
+- name: Copy files to samba dirs... (4)
+  template: src=pub1.j2 dest=/samba/public/Index_Instructions.xlsx
+ 
+
+
+
+ 
+
