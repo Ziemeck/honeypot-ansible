@@ -1,0 +1,6 @@
+---
+- name: Installing Samba on the server 
+  hosts: honeypot
+  remote_user: root
+  roles:
+   - samba

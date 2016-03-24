@@ -1,0 +1,18 @@
+---
+packages_ubuntu:
+  - samba
+  - samba-common
+  - python-glade2
+  - system-config-samba
+
+workgroup: COMP
+public_share_name: public
+public_share_path: /samba/public
+private_share_name: private
+private_share_path: /samba/private
+samba_group_name: smbgroup
+samba_users: 
+  - name: 'tech'
+    smbpassword: 'Pa$$w0rd'
+  - name: 'devops'
+    smbpassword: 'Pa$$w0rd'
